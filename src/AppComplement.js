@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from "react";
 
 export default function AppComplement() {
-  const [location, setLocation] = useState({})
+  const [location, setLocation] = useState({});
 
   useEffect(() => {
-    navigator.geolocation.watchPosition(handlePositionReceived)
-  }, [])
+    navigator.geolocation.watchPosition(handlePositionReceived);
+  }, []);
 
   function handlePositionReceived({ coords }) {
-    const { latitude, longitude } = coords
+    const { latitude, longitude } = coords;
 
-    setLocation({ latitude, longitude })
+    setLocation({ latitude, longitude });
   }
   return (
     <>
